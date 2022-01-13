@@ -1,13 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import { App } from './app/App';
 import reportWebVitals from './reportWebVitals';
+import axios from 'axios';
+import { AppProviders } from './providers/AppProviders';
+
+axios.defaults.baseURL = 'https://fsl-candidate-api-vvfym.ondigitalocean.app/v1';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <AppProviders>
     <App />
-  </React.StrictMode>,
+  </AppProviders>
+  ,
   document.getElementById('root')
 );
 
