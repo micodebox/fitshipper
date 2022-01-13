@@ -40,8 +40,6 @@ export const AddressFreeFormView = ({ address, onSubmit: onSubmitProps }: Addres
         zip: parseInt(zip, 10),
       };
 
-      console.log(address);
-
       await onSubmitProps?.(address);
     } catch (error) {
       actions.setErrors({ fullAddress: 'Invalid format!' });
